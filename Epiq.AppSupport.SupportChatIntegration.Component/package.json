@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "main": "SupportButtonComponent.js",
+  "version": "1.0.1",
+  "main": "dist/SupportChatIntegrationComponent.js",
   "scripts": {
     "build": "babel src/SupportChatIntegrationComponent.jsx -o dist/SupportChatIntegrationComponent.js"
   },
