@@ -21,7 +21,7 @@ class SupportChatIntegrationComponent extends React.Component {
             'div',
             null,
             React.createElement(SupportButtonComponent, { onClick: this.showChatWindow }),
-            this.state.showChat && React.createElement(SupportChatComponent, null)
+            this.state.showChat && React.createElement(SupportChatComponent, { type: '1', image: 'https://www.redbulletin.com/sites/default/files/styles/sharing-thumbnail/public/images/article-thumbnail-smartphone/joker_1.jpg?itok=gwMU6YAY' })
         );
     }
 }
