@@ -1,28 +1,29 @@
 ﻿import React from 'react';
-import dotnetify from 'dotnetify';
+import SupportButtonComponent from 'epiq-appsupport-chatbutton-component';
+import SupportChatComponent from 'epiq-appsupport-chatwindow-component';
+import 'bootstrap/dist/css/bootstrap.css';
 
 class SupportChatIntegrationComponent extends React.Component {
     constructor(props) {
         super(props);
+        this.state = { showChat: false };
 
-        //dotnetify.react.connect("SayHiVM", this);
-		this.state = { Greetings: "", ServerTime: "" };		
+        this.showChatWindow = this.showChatWindow.bind(this);
+    }
+
+    showChatWindow() {
+        const { showChat } = this.state;
+        this.setState({ showChat: !showChat });
 	}
 
-	
-
 	render() {
-		var style = {
-			'background-color': 'green',
-			'border-radius': '5px'
-		};
-
         return (
-			<button style={style}>Send</button>
+            <div>
+                <SupportButtonComponent onClick={this.showChatWindow} />
+                {this.state.showChat && <SupportChatComponent /> }
+            </div>
         );
     }
 }
-
-
 
 export default SupportChatIntegrationComponent;
