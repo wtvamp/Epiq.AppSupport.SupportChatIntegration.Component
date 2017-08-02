@@ -30585,7 +30585,7 @@ var SupportChatIntegrationComponent = function (_React$Component) {
                 'div',
                 null,
                 _react2.default.createElement(_epiqAppsupportChatbuttonComponent2.default, { onClick: this.showChatWindow }),
-                this.state.showChat && _react2.default.createElement(_epiqAppsupportChatwindowComponent2.default, null)
+                this.state.showChat && _react2.default.createElement(_epiqAppsupportChatwindowComponent2.default, { type: '1', image: 'https://www.redbulletin.com/sites/default/files/styles/sharing-thumbnail/public/images/article-thumbnail-smartphone/joker_1.jpg?itok=gwMU6YAY' })
             );
         }
     }]);
@@ -43318,13 +43318,18 @@ var SupportChatComponent = function (_React$Component) {
             var _this2 = this;
 
             return _react2.default.createElement(_reactstrap.Row, null, _react2.default.createElement(_reactstrap.Col, { sm: '6' }, _react2.default.createElement(_reactstrap.Card, null, _react2.default.createElement(_reactstrap.CardBlock, null, _react2.default.createElement(_reactstrap.CardTitle, null, 'Epiq Support Chat', _react2.default.createElement('button', { type: 'button', className: 'close', 'aria-label': 'Close' }, _react2.default.createElement('span', { 'aria-hidden': 'true' }, '\xD7'))), _react2.default.createElement(_reactstrap.CardSubtitle, null, 'App Name Goes Here'), _react2.default.createElement(_reactstrap.CardText, null, _react2.default.createElement(_reactChatBubble2.default, { messages: this.state.messages })), _react2.default.createElement(SendChatMessageBox, { onAdd: function onAdd(value) {
-                    return _this2.dispatchState({ Add: { type: 0, text: value, image: "http://lorempixel.com/50/50/cats/" } });
+                    return _this2.dispatchState({ Add: { type: _this2.props.type, text: value, image: _this2.props.image } });
                 } })))));
         }
     }]);
 
     return SupportChatComponent;
 }(_react2.default.Component);
+
+SupportChatComponent.defaultProps = {
+    type: 0,
+    image: "https://upload.wikimedia.org/wikipedia/en/1/17/Batman-BenAffleck.jpg"
+};
 
 exports.default = SupportChatComponent;
 

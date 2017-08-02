@@ -20,7 +20,7 @@ class SupportChatIntegrationComponent extends React.Component {
         return (
             <div>
                 <SupportButtonComponent onClick={this.showChatWindow} />
-                {this.state.showChat && <SupportChatComponent /> }
+                {this.state.showChat && <SupportChatComponent type="1" image="https://www.redbulletin.com/sites/default/files/styles/sharing-thumbnail/public/images/article-thumbnail-smartphone/joker_1.jpg?itok=gwMU6YAY"  /> }
             </div>
         );
     }

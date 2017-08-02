@@ -1,5 +1,5 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/SupportChatIntegrationComponent.js",
   "scripts": {
     "build": "babel src/SupportChatIntegrationComponent.jsx -o dist/SupportChatIntegrationComponent.js"
@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "epiq-appsupport-chatbutton-component": "1.0.10",
-    "epiq-appsupport-chatwindow-component": "1.0.2",
+    "epiq-appsupport-chatwindow-component": "1.0.3",
     "bootstrap": "4.0.0-alpha.6"
   },
   "files": [
